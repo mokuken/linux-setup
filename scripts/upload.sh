@@ -37,7 +37,7 @@ function upmenu {
 		        fi
 		done
 		elif [[ "$selected" == "Recent Uploads" ]]; then
-				    cat ~/.0x0_list | dmenu -l 10
+				    tac ~/.0x0_list | dmenu -l 10
 		elif [[ "$selected" == "Cancel" ]]; then
 					return
 				fi
