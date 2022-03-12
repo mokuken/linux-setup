@@ -37,7 +37,7 @@ function upmenu {
 		        fi
 		done
 		elif [[ "$selected" == "Recent Uploads" ]]; then
-				    tac ~/.0x0_list | dmenu -l 10
+                    var=$(tac ~/.0x0_list | dmenu -l 10)
                     filename=$(echo $var | awk '{print $3}')
                     url=$(echo $var | awk '{print $2}')
                     printf "$url" | xclip -sel clip
