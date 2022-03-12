@@ -38,6 +38,8 @@ function upmenu {
 		done
 		elif [[ "$selected" == "Recent Uploads" ]]; then
 				    tac ~/.0x0_list | dmenu -l 10
+                    filename=$(echo $var | awk '{print $3}')
+                    url=$(echo $var | awk '{print $2}')
 		elif [[ "$selected" == "Cancel" ]]; then
 					return
 				fi
